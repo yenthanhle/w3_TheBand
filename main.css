@@ -70,7 +70,8 @@ html {
 .down-btn {
 	font-size: 15px;
 }
-.search-btn {
+.search-btn,
+.menu-btn {
 	float: right;
 	padding: 12px 24px;
 	color: #fff;
@@ -79,6 +80,9 @@ html {
 	background-color: #f44336;
 }
 #search-icon {
+}
+.menu-btn {
+	display: none;
 }
 #slider {
 	margin-top: 46px;
@@ -247,22 +251,23 @@ html {
 	color: #000;
 }
 .contact-detail {
+	width: 100%;
 	padding: 32px 0;
-	display: flex;
+	/* display: flex; */
 }
-.contact-address {
-	width: 50%;
+.contact-address,
+.contact-feedback {
+	width: 49%;
 	font-size: 18px;
 	margin-bottom: 16px;
+	display: inline-block;
 }
-.contact-feedback {
-	width: 50%;
-	/* display: inline-block; */
+/* .contact-feedback {
+	width: 40%;
+	display: inline;
 	margin: 0 -16px 8px -16px;
-}
-.input-box {
-	display: flex;
-}
+} */
+
 .input {
 	/* width: 100%; */
 	height: 40px;
@@ -274,15 +279,15 @@ html {
 }
 .input-name,
 .input-email {
-	width: calc(50% - 9px);
+	width: calc(50% - 6px);
 }
 .input.input-name {
 	margin-right: 8px;
 }
 .input.input-email {
-	margin-left: 8px;
+	/* margin-left: 8px; */
 }
-.input-address {
+.input-message {
 	width: 100%;
 	margin-top: 8px;
 	/* height: 100%; */
@@ -399,5 +404,72 @@ html {
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+@media only screen and (max-width: 46.1875em) {
+	.search-btn,
+	.slider-text,
+	#nav > li:not(:first-child) {
+		display: none;
+	}
+
+	.menu-btn {
+		display: inline-block;
+	}
+	.tour-section,
+	.content-section,
+	.contact-section {
+		width: 100%;
+		padding: 10px 10px;
+		text-align: justify;
+		box-sizing: border-box;
+	}
+	.member-list {
+		width: 50%;
+		display: inline;
+		/* align-items: center; */
+		margin: 0;
+		padding: 0;
+	}
+	.member-infor {
+		width: 100%;
+	}
+	.tour-list {
+		width: 100%;
+		display: block;
+	}
+	.tour-infor {
+		width: 100%;
+		padding: 10px 10px;
+	}
+	.tour-infor:last-child {
+		margin-bottom: 20px;
+	}
+	.contact-section h2 {
+		margin-top: 50px;
+	}
+	.contact-detail {
+		display: block;
+	}
+	.contact-address {
+		width: 100%;
+	}
+	.contact-feedback,
+	.input-box > .input {
+		width: 100%;
+	}
+	.contact-feedback {
+		margin: 0;
+		padding: 0;
+	}
+	.input-box {
+		display: block;
+	}
+	.input-box > .input {
+		margin: 8px 0;
+	}
+	.position-section {
+		margin-top: 100px;
 	}
 }
